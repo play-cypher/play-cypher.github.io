@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Cipher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cipher-container">
+        <h1>🔑 Play Cipher</h1>
+        
+        <div class="mode-select">
+            <button id="btn-encrypt" class="active" onclick="setMode('encrypt')">Encrypt</button>
+            <button id="btn-decrypt" onclick="setMode('decrypt')">Decrypt</button>
+        </div>
+
+        <div class="input-group">
+            <label for="input-text" id="input-label">Text to Encrypt:</label>
+            <textarea id="input-text" placeholder="Type your text here..."></textarea>
+        </div>
+
+        <button id="process-btn" onclick="processText()">Run Cipher</button>
+
+        <div class="output-group">
+            <div class="output-header">
+                <label for="output-text">Result:</label>
+                <button id="copy-btn" onclick="copyToClipboard()">📋 Copy</button>
+            </div>
+            <textarea id="output-text" readonly placeholder="Your result will appear here..."></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
